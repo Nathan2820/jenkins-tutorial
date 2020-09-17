@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('get repo') {
             steps { 
-                sh './scripts/get-repo.sh'
+                sh 'sudo ./scripts/get-repo.sh'
             }
         }
         stage('docker installs') {
             steps {
-                sh './scripts/docker-installs.sh'
+                sh 'sudo ./scripts/docker-installs.sh'
             }
         }
         stage('deploy') {
             steps {
-                sh './scripts/deploy.sh'
+                sh 'sudo ./scripts/deploy.sh'
             }
         }
     }
